@@ -3,6 +3,8 @@ A Multidisciplinary Healthcare System
 To run this project, the following steps need to be done:
 
 ResNet50 Trained Files Link: https://drive.google.com/drive/folders/1cGGxI_1bL8HInEMp9aXibgbWvs-vKwFB?usp=sharing
+Fine Tuned Llama 3.2 1B: https://drive.google.com/file/d/1UPbOXws0wXxJqItDXLD4nCcNGknaOv-4/view?usp=sharing
+NGROK Download Link: https://drive.google.com/file/d/1VNMcJeJOO3m-cWdCBzKt2-xX2hja7Hnf/view?usp=sharing
 
 
 Step 1:
