@@ -1,0 +1,10 @@
+flask
+flask_cors
+gpt4all
+torch
+torchvision
+Pillow
+opencv-python
+numpy
+scipy
+deepface
