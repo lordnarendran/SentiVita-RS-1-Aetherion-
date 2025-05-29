@@ -37,5 +37,5 @@ This system depends on APIs, so make sure your internet connection is stable. Af
 The Llama File is also given which is named as Merged_Model.
 
 That’s it! If you follow these steps, Aetherion should launch smoothly.
--- Make sure that you downloaded the dependencies in the virtual enviroment as well. They must not be downloaded generally in the system but rather in the virtual enviroment.
+-- Make sure that you downloaded the dependencies in the virtual enviroment as well. They must not be downloaded generally in the system but rather in the virtual enviroment. The requirement.txt has been provided for you.
 
