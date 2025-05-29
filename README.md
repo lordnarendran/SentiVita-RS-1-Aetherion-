@@ -2,6 +2,9 @@
 A Multidisciplinary Healthcare System
 To run this project, the following steps need to be done:
 
+ResNet50 Trained Files Link: https://drive.google.com/drive/folders/1cGGxI_1bL8HInEMp9aXibgbWvs-vKwFB?usp=sharing
+
+
 Step 1:
 First, clone the entire repository. Then update the paths in the backend Python file. This includes setting the correct path for the LLaMA 3.2 1B model in GGUF format, the 14 image datasets in .pth format, and the three folders: Registration, Authentication, and Authentication_Logs. These folders should be created manually if they don’t exist. Initially, the backend file is in a folder called gguf-api, but you can move it elsewhere once the setup is done.
 
