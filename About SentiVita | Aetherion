@@ -1,0 +1,30 @@
+SentiVita's Aetherion (VZ, Alpha 1 Billion) – Final Year Project Highlights
+Custom Medical LLM: Fine-tuned LLaMA 3.2 1B on 22M+ instruction-response medical QA pairs (~5.7B tokens) across 19+ datasets, including PubMed QA, MedMCQA, and MedConcepts QA.
+
+Facial Authentication: Integrated DeepFace-based secure login for distinct roles—doctor, patient, pharmacist, and receptionist.
+
+Multi-role Interface: Built with JavaScript , offering customized functionalities and a futuristic UI for each user role.
+
+Disease Prediction System: Leverages the ResNet50 architecture to predict different diseases through a slider.
+
+Language Support: Accessible in 7 languages, improving usability across diverse patient demographics.
+
+Cognitive & Therapeutic Modules: Includes ASMR therapy (5 sound themes), mental health games, and self-healing tools for patient well-being.
+
+Live Medical Feed: Displays real-time medical news, emergency updates, and healthcare alerts within the system.
+
+Advanced Visualizations: Uses 14 ResNet-trained datasets to deliver 6+ medical imaging tools, including:
+
+Edge Detection
+
+Histogram Equalization
+
+Gradient Magnitude
+
+Region of Interest (ROI) Extraction
+
+Thermal Visualization
+
+3D Holographic Visualization
+
+3D Limb Reconstruction
