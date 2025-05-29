@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentiVita - Quantum AI Healthcare System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <style>
+        /* NEW CENTERING SOLUTION - MORE ROBUST */
+        #neuro-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            background-color: rgba(0,0,0,0.5); /* Optional: dim background */
+        }
+        
+        /* Preserve all existing loader styles */
+        .neuro-loader {
+            /* Your existing neuro-loader styles remain here */
+            /* This ensures we don't lose any visual effects */
+        }
+    </style>
+</head>
+<body>
+    <!-- Holographic Background -->
+    <div class="holographic-bg"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Neuro-Sync Loading Animation - NOW PROPERLY CENTERED -->
+    <div id="neuro-loader">
+        <div class="neuro-loader">
+            <div class="quantum-sphere"></div>
+            <div class="neural-network">
+                <div class="neuron"></div>
+                <div class="neuron"></div>
+                <div class="neuron"></div>
+                <div class="axon"></div>
+                <div class="axon"></div>
+                <div class="axon"></div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-char">I</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">T</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">A</span>
+                <span class="loading-char">L</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">Z</span>
+                <span class="loading-char">I</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">G</span>
+                <span class="loading-char"> </span>
+                <span class="loading-char">Q</span>
+                <span class="loading-char">U</span>
+                <span class="loading-char">A</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">T</span>
+                <span class="loading-char">U</span>
+                <span class="loading-char">M</span>
+                <span class="loading-char"> </span>
+                <span class="loading-char">C</span>
+                <span class="loading-char">O</span>
+                <span class="loading-char">R</span>
+                <span class="loading-char">E</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="main-content">
+        <!-- Bio-Interface Sidebar -->
+        <aside class="sidebar">
+            <div class="ai-status">
+                <div class="quantum-pulse">
+                    <div class="quantum-core"></div>
+                    <div class="quantum-orbits">
+                        <div class="orbit"></div>
+                        <div class="orbit"></div>
+                        <div class="orbit"></div>
+                    </div>
+                </div>
+                <div class="status-text">
+                    <p class="status-title">NEUROSYNC ACTIVE</p>
+                    <p class="status-sub">Quantum AI v3.2.7</p>
+                </div>
+                <div class="bio-signal">
+                    <div class="signal-bar"></div>
+                    <div class="signal-bar"></div>
+                    <div class="signal-bar"></div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3><span class="section-icon">⎔</span> BIO-IDENTITY</h3>
+                    <button class="sidebar-button" data-action="register">
+                        <i class="fas fa-dna"></i>
+                        <span>Genomic Registration</span>
+                        <div class="button-glow"></div>
+                    </button>
+                    <button class="sidebar-button" data-action="authenticate">
+                        <i class="fas fa-fingerprint"></i>
+                        <span>Neural Authentication</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                
+                <div class="nav-section">
+                    <h3><span class="section-icon">⚕</span> MEDICAL MATRIX</h3>
+                    <button class="sidebar-button" data-action="heal">
+                        <i class="fas fa-atom"></i>
+                        <span>Cellular Regeneration</span>
+                        <div class="button-glow"></div>
+                    </button>
+                    <button class="sidebar-button" data-action="cognitive">
+                        <i class="fas fa-brain-circuit"></i>
+                        <span>Neuro-Enhancement</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                
+                <div class="nav-section">
+                    <h3><span class="section-icon">⚠</span> CRISIS PROTOCOLS</h3>
+                    <button class="sidebar-button" data-action="ambulance">
+                        <i class="fas fa-ambulance"></i>
+                        <span>Drone Ambulance</span>
+                        <div class="button-glow"></div>
+                    </button>
+                    <button class="sidebar-button" data-action="clinic">
+                        <i class="fas fa-hospital-alt"></i>
+                        <span>Nearest Med-Pod</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                
+                <div class="nav-section">
+                    <h3><span class="section-icon">⧉</span> DATA STREAMS</h3>
+                    <button class="sidebar-button" data-action="news">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>BioFeed Network</span>
+                        <div class="button-glow"></div>
+                    </button>
+                    <button class="sidebar-button" data-action="preview">
+                        <i class="fas fa-projector"></i>
+                        <span>System Holograph</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                
+                <button class="sidebar-button" id="language-switcher">
+                    <i class="fas fa-language"></i>
+                    <span>Neural Translation</span>
+                    <div class="button-glow"></div>
+                </button>
+            </nav>
+            
+            <!-- DNA Animation -->
+            <div class="dna-animation-container">
+                <div class="dna-helix">
+                    <div class="dna-strand left-strand">
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                    </div>
+                    <div class="dna-strand right-strand">
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                    </div>
+                    <div class="dna-connectors">
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                        <div class="connector"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="quantum-connection">
+                    <div class="connection-status"></div>
+                    <span>Quantum Link: Stable</span>
+                </div>
+                <div class="encryption-status">
+                    <i class="fas fa-lock"></i>
+                    <span>Neuro-Encrypted</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header with Holographic Projection -->
+            <div class="content-header">
+                <div class="holographic-badge">
+                    <h1>AETHERION VZ™ Alpha-1B <span class="version">Q-OS v4.7.2</span></h1>
+                    <p>QUANTUM MEDICAL INTELLIGENCE SYSTEM</p>
+                    <div class="badge-glow"></div>
+                </div>
+                <div class="header-ornament"></div>
+            </div>
+            
+            <!-- Bio-Vitals Monitor -->
+            <div class="bio-vitals-container">
+                <div class="vitals-header">
+                    <h3>PATIENT BIO-VITALS</h3>
+                    <div class="vitals-status">
+                        <span class="status-indicator"></span>
+                        <span>REAL-TIME MONITORING</span>
+                    </div>
+                </div>
+                <canvas id="heartrateCanvas" class="vitals-monitor-canvas"></canvas>
+                <div class="vitals-data">
+                    <div class="vital-stat">
+                        <span>HEART RATE</span>
+                        <div class="stat-value">72 <small>BPM</small></div>
+                    </div>
+                    <div class="vital-stat">
+                        <span>NEURAL ACTIVITY</span>
+                        <div class="stat-value">84% <small>EFF</small></div>
+                    </div>
+                    <div class="vital-stat">
+                        <span>CELLULAR INTEGRITY</span>
+                        <div class="stat-value">97% <small>OPT</small></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quantum Interface Controls -->
+            <div class="quantum-interface">
+                <button class="quantum-button primary" id="openChatbot">
+                    <div class="quantum-glow"></div>
+                    <i class="fas fa-robot"></i>
+                    <span>NEURO-AI CONSULTATION</span>
+                </button>
+                <button class="quantum-button secondary" data-action="disease-classifier">
+                    <div class="quantum-glow"></div>
+                    <i class="fas fa-virus"></i>
+                    <span>PATHOGEN DETECTION</span>
+                </button>
+                <button class="quantum-button tertiary" data-action="genome-scan">
+                    <div class="quantum-glow"></div>
+                    <i class="fas fa-dna"></i>
+                    <span>3D LIMB RECONSTRUCTION</span>
+                </button>
+            </div>
+            
+            <!-- System Status Dashboard -->
+            <div class="system-dashboard">
+                <div class="dashboard-header">
+                    <h3>QUANTUM SYSTEM STATUS</h3>
+                    <div class="dashboard-tabs">
+                        <button class="tab-button active">CORE</button>
+                        <button class="tab-button">NETWORK</button>
+                        <button class="tab-button">BIO-LINK</button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="status-card">
+                        <div class="card-header">
+                            <i class="fas fa-quantum-computer"></i>
+                            <h4>AI PROCESSING</h4>
+                        </div>
+                        <div class="quantum-meter">
+                            <div class="meter-fill" style="width: 92%"></div>
+                            <div class="meter-glow"></div>
+                        </div>
+                        <div class="card-data">
+                            <span>92% UTILIZATION</span>
+                            <span>4.7 PETAFLOP/S</span>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card critical">
+                        <div class="card-header">
+                            <i class="fas fa-biohazard"></i>
+                            <h4>PATIENT ALERTS</h4>
+                        </div>
+                        <div class="alert-counter">3</div>
+                        <div class="card-data">
+                            <span>2 CRITICAL</span>
+                            <span>1 WARNING</span>
+                        </div>
+                        <div class="pulse-alert"></div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="card-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h4>NEURAL NETWORK</h4>
+                        </div>
+                        <div class="neural-visual">
+                            <div class="neuron-node"></div>
+                            <div class="neural-connections"></div>
+                        </div>
+                        <div class="card-data">
+                            <span>14.2 BILLION PARAMS</span>
+                            <span>99.99% ACCURACY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Holographic Display -->
+            <div class="holographic-display">
+                <div class="display-header">
+                    <h3>BIO-SYSTEM VISUALIZATION</h3>
+                    <div class="display-controls">
+                        <button class="control-button"><i class="fas fa-heartbeat"></i></button>
+                        <button class="control-button"><i class="fas fa-brain"></i></button>
+                        <button class="control-button"><i class="fas fa-dna"></i></button>
+                        <button class="control-button active"><i class="fas fa-atom"></i></button>
+                    </div>
+                </div>
+                <div class="hologram-container">
+                    <div class="hologram-base"></div>
+                    <div class="hologram-effect">
+                        <div class="molecule-structure">
+                            <div class="atom"></div>
+                            <div class="atom"></div>
+                            <div class="atom"></div>
+                            <div class="bond"></div>
+                            <div class="bond"></div>
+                            <div class="bond"></div>
+                        </div>
+                    </div>
+                    <div class="hologram-controls">
+                        <div class="hologram-zoom">
+                            <button class="zoom-button"><i class="fas fa-search-plus"></i></button>
+                            <button class="zoom-button"><i class="fas fa-search-minus"></i></button>
+                        </div>
+                        <div class="hologram-rotate">
+                            <span>3D ROTATION</span>
+                            <div class="rotation-control"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quantum Footer -->
+            <footer class="quantum-footer">
+                <div class="footer-section">
+                    <div class="quantum-logo">
+                        <div class="logo-core"></div>
+                        <div class="logo-rings">
+                            <div class="ring"></div>
+                            <div class="ring"></div>
+                            <div class="ring"></div>
+                        </div>
+                    </div>
+                    <p>QUANTUM MEDICAL SYSTEMS</p>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>NEURO-ENCRYPTED</span>
+                    </div>
+                    <p>© 2045 SENTINEL Q-HEALTH</p>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="#">QUANTUM SECURITY</a>
+                        <a href="#">NEURAL PRIVACY</a>
+                        <a href="#">BIO-ETHICS</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        
+        <!-- Quantum Chat Interface -->
+        <div id="quantum-chat" class="quantum-chat hidden">
+            <div class="chat-header">
+                <div class="ai-avatar">
+                    <div class="avatar-core"></div>
+                    <div class="avatar-pulse"></div>
+                </div>
+                <h3>NEURO-AI CONSULTATION</h3>
+                <button id="closeChatbot" class="quantum-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span>QUANTUM MEDICAL AI</span>
+                            <span>SYSTEM STATUS: ONLINE</span>
+                        </div>
+                        <p>Welcome to Aetherion Neuro-AI. I am ready to assist with your medical queries. Please describe your symptoms or concerns in detail for quantum-enhanced analysis.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-field">
+                    <textarea id="userQuestion" placeholder="Enter your medical query for quantum analysis..."></textarea>
+                    <div class="input-effects"></div>
+                </div>
+                <button id="askButton" class="quantum-send">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>TRANSMIT</span>
+                </button>
+            </div>
+            
+            <div class="chat-status">
+                <div class="status-indicator"></div>
+                <span>QUANTUM ENCRYPTION ACTIVE</span>
+            </div>
+        </div>
+        
+        <!-- Language Selection Interface -->
+        <div id="neuro-translator" class="quantum-chat hidden">
+            <div class="translator-header">
+                <h3>NEURAL LANGUAGE SYNCHRONIZATION</h3>
+                <p>Select preferred neural communication frequency</p>
+                <button id="close-language" class="quantum-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="language-grid">
+                <div class="language-option active">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <span>ENGLISH</span>
+                    <div class="selection-glow"></div>
+                </div>
+                
+                <div class="language-option">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span>BAHASA</span>
+                    <div class="selection-glow"></div>
+                </div>
+                
+                <div class="language-option">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <span>HINDI</span>
+                    <div class="selection-glow"></div>
+                </div>
+                
+                <div class="language-option">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <span>RUSSIAN</span>
+                    <div class="selection-glow"></div>
+                </div>
+            </div>
+            
+            <div class="translator-footer">
+                <button id="set-language" class="quantum-confirm">
+                    <span>SYNCHRONIZE NEURAL PATHWAYS</span>
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Text Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const introText = document.getElementById('intro-text');
+            const neuroLoader = document.getElementById('neuro-loader');
+            const neuralNetwork = document.getElementById('neural-network-intro');
+
+            // Initial states
+            introText.style.display = 'flex';
+            neuroLoader.style.display = 'none';
+
+            // Create neural network axons dynamically
+            function createNeuralAxons() {
+                const layers = neuralNetwork.querySelectorAll('.neural-layer');
+                const nodes = Array.from(layers).map(layer => Array.from(layer.querySelectorAll('.neural-node')));
+                
+                nodes.forEach((layerNodes, layerIndex) => {
+                    if (layerIndex < nodes.length - 1) {
+                        const nextLayerNodes = nodes[layerIndex + 1];
+                        layerNodes.forEach((node1, i) => {
+                            nextLayerNodes.forEach((node2, j) => {
+                                const rect1 = node1.getBoundingClientRect();
+                                const rect2 = node2.getBoundingClientRect();
+                                const x1 = rect1.left + rect1.width / 2 - neuralNetwork.getBoundingClientRect().left;
+                                const y1 = rect1.top + rect1.height / 2 - neuralNetwork.getBoundingClientRect().top;
+                                const x2 = rect2.left + rect2.width / 2 - neuralNetwork.getBoundingClientRect().left;
+                                const y2 = rect2.top + rect2.height / 2 - neuralNetwork.getBoundingClientRect().top;
+                                const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                                const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+
+                                const axon = document.createElement('div');
+                                axon.classList.add('neural-axon');
+                                axon.style.width = `${length}px`;
+                                axon.style.left = `${x1}px`;
+                                axon.style.top = `${y1}px`;
+                                axon.style.transform = `rotate(${angle}deg)`;
+                                axon.style.animationDelay = `${1.9 + (i * j * 0.1)}s`;
+                                neuralNetwork.appendChild(axon);
+                            });
+                        });
+                    }
+                });
+            }
+
+            // Initialize neural network
+            createNeuralAxons();
+
+            // Show intro text for 5s, then fade out and show neuro-loader
+            setTimeout(() => {
+                introText.classList.add('hidden');
+                setTimeout(() => {
+                    introText.style.display = 'none';
+                    neuroLoader.style.display = 'block';
+                    // script.js handles neuro-loader and main content
+                }, 1000); // Fade-out duration
+            }, 5000); // Intro text duration
+        });
+    </script>
+
+    <!-- Existing script -->
+    <script src="script.js"></script>
+    <!-- Scripts for Three.js, OrbitControls, and Disease Classifier -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="/static/disease_classifier.js"></script>
+</body>
+</html>
