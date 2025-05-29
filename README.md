@@ -2,8 +2,38 @@
 A Multidisciplinary Healthcare System
 To run this project, the following steps need to be done:
 
-Step 1) Clone the whole repository first and set the paths correctly. The paths are for the Llama 3.2 1B LLM and 14 dataset paths in "pth" format. Registration, Authentication and Authentication_Logs are the final paths to be updated in the backend. Note that the path upadting will initially take place in the backend file which can be found in the folder named as gguf-api.
-Step 2) The Step 2 is to edit the LaunhAetherion file. The ngrok application will be added in the githib repo as well so, when the whole repo is cloned, ngrok will also be downloaded. After this, in the file update the paths for the FRONTEND_PATH which is in the folder Aetherion/app. Backend path as mentioned earlier is in the gguf-api folder. Them, set the ngrok path in the LaunchAetherion bat file as well. The SCRIPT_FILE path does not to be changed as long as the FRONTEND_PATH is updated. This compleletes the updating part to run the system.
-Step 3) The file LaunhAetherion is a Wndows Batch File (BAT File ) so, the updates mentioned in step 2 need to be done by editing the file in notepad and saving it through "save", not "save as.
-Step 4) This is all for setting up the project and if all these steps are followed correctly, then, the user has to click on the windows batch file "LaunhAetherion" to initiate the process and then soon it opens terminals. As soon as the URL can been seen in the terminal window which will appear this, ex, "https://e244-210-19-13-180.ngrok-free.app". The iser will be URL like this which he has to copy and paste in another terminal which asks to please copy and paste the ngrok url. Note that this is an example URL but, the structure is mostly the same. Ngrok provides with different URL's eaxch time you load. So, after pasting the URL in the terminal and clicking enter it, will display press any key to continue. Enter can be clicked again and it will immediately load the system automatcially which will be the index file which is the interface. This system is API based so, please make sure that the connection is stable to do LLM Inference, Prediction, Visualization, and 3D Limb Reconstruction.
--User will initially see three termainals after clicking the batch file. The first one is which just shows if the Port is active. The second terminal is the ngrok terminal from which the URL will be copied and pasted in the third terminal just as mentioned in Step 4. The Registration and Authentication Folders are in ther SentiVita Backup Folder and the ngrok is in the sub folder of this folder which is named as SentiVita Backup.-
+Step 1:
+First, clone the entire repository. Then update the paths in the backend Python file. This includes setting the correct path for the LLaMA 3.2 1B model in GGUF format, the 14 image datasets in .pth format, and the three folders: Registration, Authentication, and Authentication_Logs. These folders should be created manually if they don’t exist. Initially, the backend file is in a folder called gguf-api, but you can move it elsewhere once the setup is done.
+
+Step 2:
+Now go to the file called LaunchAetherion.bat, which is inside the Aetherion/app folder. Open it in Notepad (don’t use "Save As" later). You’ll need to update three things in it:
+
+Set the FRONTEND_PATH to point to the Aetherion/app folder.
+
+Set the BACKEND_PATH to wherever you placed your backend file.
+
+Set the NGROK_PATH to the location where ngrok.exe is saved. This will be in the SentiVita Backup/ngrok folder that comes with the repo.
+
+The SCRIPT_FILE path doesn’t need to be changed if the frontend path is correct.
+
+Step 3:
+Once all paths are set, save the batch file and simply double-click it. It will open three terminal windows:
+
+The first shows whether the backend port is active.
+
+The second runs ngrok and gives you a URL (something like https://abcd-1234.ngrok-free.app).
+
+The third will ask you to paste the ngrok URL. Once you do that and press Enter, it will launch the full system in your browser.
+
+Step 4:
+This system depends on APIs, so make sure your internet connection is stable. After launching, the interface will load and you can start using all features like login, registration, AI inference, 3D visualization, etc.
+
+Important:
+The GGUF model file and its associated tokenizer/config files will be shared with you through a separate download link. After downloading, place them in a folder like llm_model/ and update the backend to load the model from that folder using:
+model = GPT4All("llm_model/your-model-name.gguf")
+
+You should remove or comment out any lines in the backend that refer to gguf-api if they exist—they’re not needed anymore.
+
+That’s it! If you follow these steps, Aetherion should launch smoothly.
+
+
